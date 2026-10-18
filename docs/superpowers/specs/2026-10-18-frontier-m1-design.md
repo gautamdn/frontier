@@ -6,8 +6,8 @@
 
 ## Purpose
 
-A parent-facing tracker that answers one question: *what is my child ready for
-next?* Built on the open [Marble Skill Taxonomy](https://github.com/withmarbleapp/os-taxonomy)
+A parent-facing tracker that answers one question: _what is my child ready for
+next?_ Built on the open [Marble Skill Taxonomy](https://github.com/withmarbleapp/os-taxonomy)
 (1,590 primary-school micro-topics in a prerequisite DAG). The parent logs
 evidence they've observed; the app computes the **frontier** — topics not yet
 mastered whose hard prerequisites are all met — and presents that as the child's
@@ -44,10 +44,10 @@ their own spec → plan → implementation cycle.
 - Taxonomy data validated against the live repo:
   - `topics.json`: `{ version, topicCount, topics[] }`, 1,590 topics. Each topic
     has `id, type, subject, domain, name, description, ageRangeStart,
-    ageRangeEnd, centrality, evidence[], assessmentPrompt, standards[]`.
+ageRangeEnd, centrality, evidence[], assessmentPrompt, standards[]`.
   - `dependencies.json`: `{ version, note, edgeCount, dependencies[] }`, 3,221
     edges. Each edge: `{ topicId, prerequisiteId, strength: "hard"|"soft",
-    reason }`.
+reason }`.
   - 8 subjects. `ageRangeStart` distribution: 4→41, 5→256, 6→129, 7→289, 8→147,
     9→308, 10→155, 11→145, 12→92, 13→28.
   - 297 topics have `ageRangeStart <= 5` (the default window for a 4-year-old).
@@ -140,9 +140,11 @@ All functions pure; the evidence log and child age are passed in.
 ### Types (sketch)
 
 ```ts
-interface EvidenceEntry { seenAt: string }           // ISO timestamp
+interface EvidenceEntry {
+  seenAt: string
+} // ISO timestamp
 interface TopicLog {
-  evidence: Record<number, EvidenceEntry>            // evidenceIndex -> seen
+  evidence: Record<number, EvidenceEntry> // evidenceIndex -> seen
   explicitMastered?: boolean
   masteredAt?: string
 }

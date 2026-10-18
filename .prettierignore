@@ -1,0 +1,7 @@
+dist
+dev-dist
+vendor
+src/data/taxonomy.json
+package-lock.json
+public/icon-192.png
+public/icon-512.png
