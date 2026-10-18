@@ -1,0 +1,3 @@
+[submodule "vendor/os-taxonomy"]
+	path = vendor/os-taxonomy
+	url = https://github.com/withmarbleapp/os-taxonomy.git
