@@ -17,7 +17,7 @@ The parent is the user; the child never uses the app. Nothing is ever framed as
 - **Installable.** It's a PWA — add it to your iPad home screen and it works
   offline.
 
-> **Live app:** _added at the deploy checkpoint._
+> **Live app:** <https://gautamdn.github.io/frontier/>
 
 ## Development
 
